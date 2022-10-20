@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+    color: rgb(157, 255, 0);
+    font: normal 16pt Arial;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: auto;
+}
+
+section{
+    text-align: justify;
+    text-indent: 2%;
+}
+
+h1{
+    text-align: center;
+}
+h2{
+    text-indent: 3%;
+}
+
+img{
+    height: 75%;
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

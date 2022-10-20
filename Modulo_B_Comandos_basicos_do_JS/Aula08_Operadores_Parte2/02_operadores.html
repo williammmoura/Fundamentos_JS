@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores JS - Parte 2</title>
+    <style>
+        body{
+            font: 20px Arial;
+            color: rgb(123, 203, 2);
+            background-color: black;
+            text-align: justify;
+        }
+
+        h1, h2{
+            text-indent: 3%;
+        }
+
+        table{
+            margin: auto;
+        }
+        th, td{
+            margin: 10px;
+            color: black;
+            background-color: rgb(123, 203, 2);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>Operadores Relacionais - JavaScript</h1>
+    <script>
+        //Explicação
+        document.write(
+            `5 > 2 -> 5 maior que 2 <i>(true)</i>;<br>
+            7 < 4 -> 7 menor que 4 <i>(false)</i>;<br>
+            4 >= 4 -> 4 maior ou igual que 4 <i>(true)</i>;<br>
+            9 <= 7 -> 9 menor ou igual que 7 <i>false)</i>;<br>
+            7 == 7 -> 7 igual a 7 <i>(true)</i>;<br>
+            7 != 4 -> 7 diferente (não igual) de 4 <i>(true)</i>;<br><br>
+    
+            Os resultados, true ou false, são valores boolean.<br><br>`
+        );
+    
+        let a = 5;
+        let b = 2;
+        document.write(`5 é maior que 2? ${a > b}<br>`);
+        document.write(`5 é menor que 2? ${a < b}<br>`);
+        document.write(`5 é maior ou igual a 2? ${a >= b}<br>`);
+        document.write(`5 é menor ou igual a 2? ${a <= b}<br>`);
+        document.write(`5 é igual a 2? ${a == b}<br>`);
+        document.write(`5 é diferente de 2? ${a != b}`);
+    </script>
+
+    <h2>Operadores Relacionais de IDENTIDADE</h2>
+    <script>
+        let n = 5;
+        let s = '5';
+        document.write(`5 == '5'? ${n == s}<br>`);
+        document.write(`Igual (==) <strong>NÃO</strong> retorna o <strong>TIPO PRIMITIVO</strong> da variável, por isso o resultado será <strong>TRUE</strong>.<br>`);
+        document.write(`5 === '5'? ${n === s}<br>`);
+        document.write(`Extritamente igual (===) <strong>CONSIDERA</strong> o <strong>TIPO PRIMITIVO</strong>. Logo o resustado será FALSE, por que há um NUMBER e uma STRING.`)
+    </script>
+
+    <h2>Operadores Lógicos</h2>
+    <script>
+        document.write(`! -> Negação (não);<br>
+                        && -> Conjunção (e);<br>
+                        || -> Disjunção (ou).<br><br>`)
+    </script>
+
+    <!--Tabela-->
+    <table>
+        <tr>
+            <th><strong>NÃO (!) Operador unário</strong></th>
+            <td>True = False</td>
+            <td>False = True</td>
+        </tr>
+        <h2>TABELA DE OPERADORES LÓGICOS</h2>
+        <tr>
+            <th><strong>E (&&) Operador binário</strong></th>
+            <tr>
+                <td>True  </td><td>&&</td><td>True  </td><td>=</td><td>TRUE</td>
+            </tr>
+            <tr>
+                <td>False </td><td>&&</td><td>False </td><td>=</td><td>FALSE</td>
+            </tr>
+            <tr>
+                <td>True  </td><td>&&</td><td>False </td><td>=</td><td>FALSE</td>
+            </tr>
+                <td>False </td><td>&&</td><td>True  </td><td>=</td><td>FALSE</td>
+        </tr>
+        <tr>
+            <th><strong>OU (||) Operador binário</strong></th>
+            <tr>
+                <td>True  </td><td>||</td><td>True  </td><td>=</td><td>TRUE</td>
+            </tr>
+            <tr>
+                <td>False </td><td>||</td><td>False </td><td>=</td><td>FALSE</td>
+            </tr>
+            <tr>
+                <td>True  </td><td>||</td><td>False </td><td>=</td><td>TRUE</td>
+            </tr>
+                <td>False </td><td>||</td><td>True  </td><td>=</td><td>TRUE</td>
+        </tr>
+    </table>
+
+    <h3>Testando no JS</h3>
+    <script>
+        let f = false;
+        let t = true;
+        document.write(`! <br>`)
+        document.write(`não false = ${!f}<br>`);
+        document.write(`não true = ${!t}<br><br>`);
+
+        document.write(`&& <br>`)
+        document.write(`false e true = ${f && t}<br>`);
+        document.write(`true e false = ${t && f}<br>`);
+        document.write(`false e false = ${f && f}<br>`);
+        document.write(`true e true = ${t && t}<br><br>`);
+
+        document.write(`|| <br>`)
+        document.write(`false ou true = ${f || t}<br>`);
+        document.write(`true ou false = ${t || f}<br>`);
+        document.write(`false ou false = ${f || f}<br>`);
+        document.write(`true ou true = ${t || t}<br><br>`);
+
+        document.write(`Exemplo:<br>`);
+        let k = 5;
+        let p = 8;
+        let logico = k > p && p % 2 == 0
+        document.write(`Temos k = 5;<br>
+                            p = 8;<br>
+                            logico = k > p && p % 2 == 0;<br><br>
+                            O valor de "logico" é igual a:  <strong>${logico}</strong><br>`);
+        document.write(`false && true = false`)
+    </script>
+
+    <h2>Operador Ternário</h2>
+    <p>Possui 3 partes:</p>
+    <table>
+        <tr>
+            <th>TESTE</th><th>?</th><th>TRUE</th><th>:</th><th>FALSE</th>
+        </tr>
+    </table>
+    <p>
+        TESTE: Teste lógico;<br> 
+        TRUE: Condição verdadeira;<br> 
+        FALSE: Condição falsa.
+    </p>
+
+    <script>
+        document.write(`Exemplo com JS:<br>`)
+        let media5 = 5.5;
+        let med = media5 > 7 ? 'Aprovado':'Reprovado';
+        document.write(`media5 = 5.5;<br>
+                        med = media5 > 7 ? 'Aprovado'
+                        : 'Reprovado';<br>`)
+        document.write(`Com a média 5.5 o aluno está: ${med}`)
+    </script>
+
+</body>
+</html>

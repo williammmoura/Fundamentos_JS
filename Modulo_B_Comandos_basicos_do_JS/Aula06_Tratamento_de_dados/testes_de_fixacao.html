@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes de Fixação</title>
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+    <h1>Testes de Fixação do Conteúdo</h1>
+    <p>Esses testes abrangem o que foi aprendido nos módulos "A" e "B".<br></p>
+    
+    <!--Guardando dados em variáveis-->
+    <section id="sec1">
+        <h2>Guardando dados em variáveis</h2>
+        Abaixo será usado variáveis para guardar dados. Será feita em linguagem JavaScript.<br>  
+        
+        <!--Imagem código-->
+        <img src="img/cod_js1.png"> 
+        
+        <!--JS-->
+        <script>
+            let nome = prompt(`Qual é o seu nome?`);
+            let idade = Number(prompt(`Qual é a sua idade?`));
+            let anoAgora = new Date();
+            let anoNasc = anoAgora.getFullYear() - idade;
+            let nascimento = alert(`Você nasceu em ${anoNasc}.`);
+        </script>
+        <br>
+        No "script" acima temos as variáveis "nome" e "idade" que será atribuído a um valor 
+        do tipo "string", que é fornecido pelo usuário em uma janela "prompt". Nas variáveis
+        abaixo é criado uma variável (anoAgora) para buscar um data (podendo ser hora, dia,
+        mês, ano...), no nosso caso, quero o ano atual. Atribuindo em uma nova variável
+        (anoNasc), tenho o ano atual, menos a idade que foi fornecida pelo usuário e, logo em
+        seguida é criada mais uma variável (nascimento), que rebe a subtração do ano atual, <br>
+        menos a idade fornecida pelo usuário.    
+    </section>
+    
+    <!--Tratando strings-->
+    <section id="sec2">
+        <h2>Tratando strings</h2>
+        Nesta subseção são mostrados tratamentos feitos com strings.
+        Lembrando! Strings são caracteres (numérico, alfanuméricos ou alfabéticos) que estão 
+        marcados entre áspas simples (' '), duplas (" "), ou ainda, entre apóstrofos (crases),
+        que é conhecido como "tamplastring". <br>
+        
+        <!--JS-->
+        <script>
+            let sobrenome = prompt('Qual é o seu sobrenome?');
+            //Usando "document.write('')" podemos escrever no browser.
+            //Abaixo ".toUpperCase()" -> deixa as letras em MAIÚSCULAS.
+            document.write(`Seu sobrenome em letras maiúsculas: ${sobrenome.toUpperCase()}<br>`);
+            //Abaixo "toLowerCase()" -> deixa as letras em minúsculas.
+            document.write(`Seu sobrenome em letras minúsculas: ${sobrenome.toLowerCase()}<br>`);
+            /*Abaixo ".length" -> fornece o tamanho da string (lembrando que a contagem) come-
+            ça a partir do zero.*/
+            document.write(`Seu sobrenome tem ${sobrenome.length} letras.<br>`)
+        </script>
+
+        <!--Imagem código-->
+        <img src="img/cod_js2.png"><br>
+
+        Esses são apenas algumas maneiras de tratar strings.<br>
+    </section>
+
+    <!--Trantando números-->
+    <section>
+        <h2>Tratando números</h2>
+        Após fazer o tratamento de variáveis strings o foco, agora, é fazer tratamento de variáveis
+        numéricas. Veja o código a seguir:<br>
+
+        <!--JS-->
+        <script>
+            const n = 3.1415926535897;
+            document.write(`O número "pi" tem infinitas casas decimais após a vírgula(3.1415926535897...), usando <strong><i>".tofixed()"</i></strong><br>
+            podemos estabelecer a quantidade de casas decimais que queremos mostrar. Por exemplo: ${n.toFixed(2)}<br>`);
+            document.write(`Também é possível trocar o ponto, que determina aunidade decimal (EUA) ${n.toFixed(2)}, por vírgula (BR) ${n.toFixed(2).replace('.', ',')} usando o <strong><i>".replace()"</i></strong>.<br>`);
+            //ATENÇÃO!!!
+            let n2 = prompt(`Digite um número:`);
+            console.log(typeof n2);//Aqui teremos uma STRING!!!
+            let n3 = Number(prompt(`Digite um número:`));
+            console.log(typeof n3)//Aqui teremos um NUMBER!!!
+        </script>
+        
+        <!--Imagem código-->
+        <img src="img/cod_js3.png">
+        Atenção as explicações contigo no script acima.
+    </section>
+</body>
+</html>

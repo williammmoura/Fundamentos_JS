@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05</title>
+    
+    <!--CSS-->
+    <style>
+        body{
+            background-color: rgb(91, 157, 251);
+            color: white;
+            font: 20pt Arial;
+        }
+
+        h1{
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem maxime vero, possimus earum ad distinctio doloremque itaque sed? Illum mollitia porro autem dolores modi officia labore repudiandae excepturi temporibus adipisci?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo ipsam dolorum sunt asperiores perspiciatis, recusandae ipsum doloribus. Maiores doloribus libero facere exercitationem, beatae voluptates quis, fugiat et sequi accusantium totam!</p>
+    
+    <!--Script JavaScript-->
+    <script>
+         let n1 = window.prompt('Digite um número:');
+         let n2 = window.prompt('Digite outro número:');
+        let soma = n1 + n2;
+        window.alert('A soma dos valores é: ' + soma + '.');/*ATENÇÃO!!! Aqui teremos uma concatenação dos valores fornecidos pelo usuário e não a soma de fato.*/
+        //No exemplo acima temos: tipoString + tipoString.
+        
+        console.log(typeof n1)//string
+        console.log(typeof n2)//string 
+
+        
+        /*Para fazer uma adição tem que ter: tipoNumber + tipoNumber.*/
+        //Vamos converter as variáveis "n3" e "n4" para TIPO NUMBER, usando "parseInt".
+        let n3 = Number.parseInt(window.prompt('Digite um número:'));
+        let n4 = Number.parseInt(window.prompt('Digite outro número:'));
+        let soma2 = n3 + n4;
+        window.alert('A soma dos valores é: ' + soma2+ '.')
+        
+        console.log(typeof n3)//number
+        console.log(typeof n4)//number 
+
+        //Para que o JS "decida" sobre a variável ser "float" ou "int", usa-se apenas o "Number"
+        let n5 = Number(window.prompt('Digite um número:'));
+        let n6 = Number(window.prompt('Digite outro número:'));
+        let soma3 = n5 + n6;
+        window.alert('A soma dos valores é: ' + soma3+ '.')
+        
+        console.log(typeof n5)//number
+        console.log(typeof n6)//number 
+
+        /*Convertendo para STRINGS*/
+        let n7 = Number(window.prompt('Digite um número:'));
+        let n8 = Number(window.prompt('Digite outro número:'));
+        let soma4 = n7 + n8;
+        window.alert('A soma dos valores é: ' + String(soma4) + '.')//Concatenação.
+        window.alert(`A soma dos valores é: ${soma4}.`)//Template-string.
+        
+        console.log(typeof soma4)//string
+        
+    </script>
+</body>
+</html>

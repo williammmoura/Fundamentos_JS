@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(0, 119, 255);
+            color: white;
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando Estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+
+    <div>
+        Clique aqui mim.
+    </div>
+
+    <div id="msg">
+        Menssagem.
+    </div>
+
+    <div name="name">
+        Nome:
+    </div>
+
+    <div id="ola">
+        Olá!
+    </div>
+
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS</p>
+
+    <script>
+        //Selecionando objetos
+        let corpo = window.document.body //A variável corpo recebe body.
+
+        //Usando "".getElementsByTagName"
+        document.write(`Usando o ".getElementByTagName('p')[0]" para selecionar a primeira tag "p".<br><br>`);
+        let p1 = window.document.getElementsByTagName('p')[0];
+
+        //Usando ".innerText"
+        window.document.write(`Com o "p1.innerText", foi selecionado o texto do primeiro parágrafo:<br> '${p1.innerText}' <br><br>`);
+
+        //Modificando a cor da fonte do primeiro parágrafo.
+        document.write(`"p1.style.color = 'black'" é possível mudar o a cor da fonte do primeiro parágrafo. VEJA NO PRIMEIRO PARÁGRAFO. ${p1.style.color = 'black'}<br><br>`);
+
+        let p2 = window.document.getElementsByTagName('p')[1] 
+        window.document.write(`Modificando o segundo parágrafo com "p2.innerText" (pega sem as formatações): ${p2.innerText} <br><br>`);
+        //Usando o ".innerHTML"
+        document.write(`Usando p2.innerHTML, retornará com a formatação com a tag "strong": <br> ${p2.innerHTML}<br><br>`)
+
+        document.write(`Alguns testes...<br>
+                        .getElement.ById();<br>
+                        .getElementsByName();<br><br>`)
+        let d = window.document.getElementById(`msg`);
+        d.style.background = 'green'
+        //d.innerText = 'Estou aguardando...'
+
+        let d1 = window.document.getElementsByName(`name`)[0];
+        d1.innerText = 'William'
+
+        document.write(`Usando por .querySeletor().`)
+        let d2 = window.document.querySelector('div#ola')
+        d2.style.background = 'blue';
+    </script>
+</body>
+</html>

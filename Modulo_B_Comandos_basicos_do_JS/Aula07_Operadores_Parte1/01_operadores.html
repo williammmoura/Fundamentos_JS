@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores em JS</title>
+    <style>
+        body{
+            font: 20px Arial;
+            color: rgb(123, 203, 2);
+            background-color: black;
+            text-align: justify;
+            text-indent: 3%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores Atméticos - JavaScript</h1>
+    <script>
+        //Soma
+        let a = 5;
+        let b = 2;
+        let soma = a + b;
+        document.write(`5 + 2 = ${soma}<br>`);
+
+        //Subtração
+        let subt = a - b;
+        document.write(`5 - 2 = ${subt}<br>`);
+
+        //Multiplicação
+        let mult = a * b;
+        document.write(`5 * 2 = ${mult}<br>`);
+
+        //Divisão
+        let divisao = a / b;
+        document.write(`5 / 2 = ${divisao}<br>`);
+
+        //Resto da divisão
+        resto = a % b;
+        document.write(`O resto da divisão entro 5 e 2 (5%2) é: ${resto}<br>`);
+
+        //Potênciação
+        let pot = a ** b;
+        document.write(`A potência de 5 elevado na 2 (5**2) é: ${pot}`)
+    </script>
+
+    <h2>Atenção com a Ordem de Precedência!!!</h2>
+    <script>
+        document.write(`Fazendo uma média.<br>`)
+        let c = 8;
+        let d = 5;
+        let media = (c + d)/2;
+        document.write(`A média entre 8 e 5 ( (8+5)/2 ) é: ${media} -> CORRETO! <br>`);
+        let media2 = c + d / 2;
+        document.write(`A média entre 8 e 5 ( 8+5/2 ) é: ${media2} -> ERRADO! Repare na sintaxe das equações e a sua ordem de precedência.`)
+    </script>
+
+    <h2>Auto-atribuição</h2>
+    <script>
+        let n = 3
+        n = n + 4
+        document.write(`n = 3; <br>
+                        n = n + 4; <br>
+                        'n' passa valer: ${n}<br>`)
+        document.write(`Simplificando a sintaxe:
+                        n += 4<br>
+                        n = ${n}`)
+    </script>
+
+    <h2>Incremento</h2>
+    <script>
+        let v = 5;
+        v++
+        document.write(`Atribuindo a variável "v" recebe 5 (v = 5), podemos incrementa uma unidade na variável "v".<br>`)
+        document.write(`Simplificando, temos: v++ (pós-incremento)<br>
+                        v passa ser igual a: ${v}<br>
+                        <strong>OBS: Há o pré-incremento, que é representado por "++v".</strong>`)
+    </script>
+</body>
+</html>
