@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="style/style02.css">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <!--Section-->
+    <section>
+        <div>
+            <p>
+                Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <br>
+            <p>
+                Sexo:
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div id="res">
+    
+        </div>
+    </section>
+    
+    <!--Footer-->
+    <footer id="pFooter">
+        <p>&copy; William Monte de Moura</p>
+        <img id="imgLogoFooter" src="img/Logo - WMM (2019_08_08 13_49_36 UTC).png" alt="Logo WMM">
+    </footer>
+
+    <!--JS-->
+    <script src="JS/javascript02.js"></script>
+</body>
+</html>
