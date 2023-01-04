@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+
+    <!--Section-->
+    <section>
+        <div>
+            <p>
+                Numero:
+                <input type="number" name="num" id="num">
+            </p>
+            <p>
+                <input type="button" value="Gerar Tabuada" onclick="calc()">
+            </p>
+            <br>
+        </div>
+        <div id="res">
+            <select name="resTab" id="resTab" size="10">
+                <option>Digite um numero para mostrar a tabuada.</option>
+            </select>
+        </div>
+    </section>
+    
+    <!--Footer-->
+    <footer id="pFooter">
+        <p>&copy; William Monte de Moura</p>
+        <img id="imgLogoFooter" src="img/Logo - WMM.png" alt="Logo WMM">
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>

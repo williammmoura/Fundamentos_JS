@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contando...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <h1>Vamos Contar</h1>
+    </header>
+
+    <!--Section-->
+    <section>
+        <div id="dados">
+            <p class="inputDados">
+                Inicio:
+                <input type="number" name="inicio" id="inicio">
+            </p>
+            <p class="inputDados">
+                Fim:
+                <input type="number" name="fim" id="fim">
+            </p>
+            <p class="inputDados">
+                Passo:
+                <input type="number" name="passo" id="passo">
+            </p>
+            <br>
+            <p class="botao">
+                <input type="button" value="Contar" onclick="contar()">
+            </p>
+        </div>
+        <div id="res">
+            Preparando a contagem...
+        </div>
+    </section>
+    
+    <!--Footer-->
+    <footer id="footer">
+        <p id="copy">&copy;William Monte de Moura</p>
+        <img class="imgFooter" src="img/Logo - WMM.png" alt="Logo_WMM"><br>
+        <a href="https://www.linkedin.com/in/williammontedemoura/"><img class="imgFooter" src="img/Logo_linkedin.png" alt="Linkedin"></a>
+        <a href="https://github.com/williammmoura"><img class="imgFooter" src="img/GitHub-Mark-Light-32px.png" alt="GitHub"></a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
